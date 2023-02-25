@@ -26,11 +26,11 @@ if ($_SERVER['REQUEST_METHOD']  == 'POST') {
       'email' => $_POST['email'],
       'phone' => $_POST['phone'],
     ];
-    header("location:/page/home");
+    header("location:/home");
   }
 };
 
 
 // rendre la vue
 $data = ['errors' => $errors];
-renderView('register.html.php', $data);
+require_with('templates/register.html.php', $data);

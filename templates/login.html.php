@@ -5,7 +5,7 @@
             <?php foreach ($errors as $error) : ?>
                 <div class="text-danger py-2"><?php echo $error; ?></div>
             <?php endforeach; ?>
-            <form action="/page/login" method="POST">
+            <form action="/login" method="POST">
                 <div class="form-outline mb-4">
                     <label class="form-label" for="form2Example1">Email address</label>
                     <input type="email" name="email" id="form2Example1" class="form-control" />
@@ -21,7 +21,7 @@
                 </div> -->
                 <button type="submit" class="btn btn-primary w-100 mb-4">Sign in</button>
                 <div class="text-center">
-                    <p>Not a member? <a href="/page/register">Register</a></p>
+                    <p>Not a member? <a href="/register">Register</a></p>
                 </div>
             </form>
         </div>

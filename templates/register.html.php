@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-lg-5 m-auto">
             <h2>Inscription</h2>
-            <form action="/page/register" method="POST">
+            <form action="/register" method="POST">
                 <div class="form-outline mb-2">
                     <label class="form-label" for="form2Example1">Nom</label>
                     <input type="text" name="lastname" id="form2Example1" class="form-control" />
@@ -32,7 +32,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary w-100 my-4">Sign in</button>
                 <div class="text-center">
-                    <p>Déjà inscrit? <a href="/page/login">Connexion</a></p>
+                    <p>Déjà inscrit? <a href="/login">Connexion</a></p>
                 </div>
             </form>
         </div>

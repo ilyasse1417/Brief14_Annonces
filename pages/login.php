@@ -32,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD']  == 'POST') {
     if ($errors) {
         /// TODO traitement ici
     } else { // connexion OK
-        header("location:/page/home");
+        header("location:/home");
     }
 };
 $data = ['errors' => $errors];
-renderView('login.html.php', $data);
+require_with('templates/login.html.php', $data);

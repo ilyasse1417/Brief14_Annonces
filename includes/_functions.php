@@ -57,9 +57,9 @@ function dump($var)
 	echo '</pre>';
 }
 
-function renderView($templateName, $data)
+function renderView_depricated($templateName, $data = [])
 {
-	$template = realpath(__DIR__ . '/../templates/' . $templateName);
+	$template = 'templates/' . $templateName;
 	if (!is_file($template)) {
 		throw new \RuntimeException('Template not found: ' . $template);
 	}

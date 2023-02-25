@@ -13,7 +13,7 @@
           <a class="nav-link active" aria-current="page" href="#">Accueil</a>
         </li>
         <li class="nav-item">
-          <a href="/page/listing" class="nav-link active" aria-current="page" href="#">Listing</a>
+          <a href="/listing" class="nav-link active" aria-current="page" href="#">Listing</a>
         </li>
         <?php if ($user = getUser()) : ?>
           <li class="nav-item dropdown">
@@ -26,12 +26,12 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="/page/logout">logout</a></li>
+              <li><a class="dropdown-item" href="/logout">logout</a></li>
             </ul>
           </li>
         <?php else : ?>
           <li class="nav-item">
-            <a href='/page/login' class="nav-link active" aria-current="page" href="#">Connexion</a>
+            <a href='/login' class="nav-link active" aria-current="page" href="#">Connexion</a>
           </li>
         <?php endif ?>
       </ul>
