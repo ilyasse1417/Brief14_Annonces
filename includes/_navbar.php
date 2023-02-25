@@ -8,31 +8,17 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul> -->
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Accueil</a>
         </li>
         <li class="nav-item">
-          <a href="index.php" class="nav-link active" aria-current="page" href="#">Listing</a>
+          <a href="/page/listing" class="nav-link active" aria-current="page" href="#">Listing</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <?php if (auth()) : ?>
+        <?php if ($user = getUser()) : ?>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              
+              <?php echo $user['email'] ?>
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="profile.php">Mon profil</a></li>
@@ -40,22 +26,15 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="logout.php">logout</a></li>
+              <li><a class="dropdown-item" href="/page/logout">logout</a></li>
             </ul>
           </li>
         <?php else : ?>
           <li class="nav-item">
-            <a href='login.php' class="nav-link active" aria-current="page" href="#">Se connecter</a>
-          </li>
-          <li class="nav-item">
-            <a href='register.php' class="nav-link active" aria-current="page" href="#">S'inscrire</a>
+            <a href='/page/login' class="nav-link active" aria-current="page" href="#">Connexion</a>
           </li>
         <?php endif ?>
       </ul>
-      <!-- <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
     </div>
   </div>
 </nav>
