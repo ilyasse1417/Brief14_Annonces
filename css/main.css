@@ -1,0 +1,14 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: antiquewhite; */
+}
+
+footer {
+    /* /* position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 130px; */
+    background: #24292f;
+}
