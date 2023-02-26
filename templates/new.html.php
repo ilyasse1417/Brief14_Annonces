@@ -20,8 +20,8 @@
                     <label class="form-label" for="form2Example1">category</label>
                     <select name="category" class="form-select" required>
                         <option selected>--</option>
-                        <option value="sale">Vente</option>
-                        <option value="rent">Location</option>
+                        <option value="Vente">Vente</option>
+                        <option value="Location">Location</option>
                     </select>
                     <div class="text-danger"><?php echo isset($errors['category']) ? $errors['category'] : "" ?></div>
                 </div>
@@ -29,11 +29,11 @@
                     <label class="form-label" for="form2Example1">type</label>
                     <select name="type" class="form-select" required>
                         <option selected>--</option>
-                        <option value="appartment">Appartement</option>
-                        <option value="house">Maison</option>
-                        <option value="villa">Villa</option>
-                        <option value="office">Bureau</option>
-                        <option value="field">Terrain</option>
+                        <option value="Appartement">Appartement</option>
+                        <option value="Maison">Maison</option>
+                        <option value="Villa">Villa</option>
+                        <option value="Bureau">Bureau</option>
+                        <option value="Terrain">Terrain</option>
                     </select>
                     <div class="text-danger"><?php echo isset($errors['type']) ? $errors['type'] : "" ?></div>
                 </div>

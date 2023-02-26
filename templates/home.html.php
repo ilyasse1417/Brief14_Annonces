@@ -1,5 +1,64 @@
 <div class="container mt-5">
-    <div class="row">
+    <div class="row bg-light p-2">
+        <div class="col">
+            <form action="/home/" method="GET">
+                <div class="container py-2">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <label class="form-label" for="form2Example1">Ville</label>
+                            <input type="text" name="city" id="city" class="form-control" value="<?php echo $_GET['city'] ?? '' ?>" />
+                        </div>
+                        <div class="col-lg-2">
+                            <label class="form-label" for="form2Example1">Prix min</label>
+                            <input type="number" name="price_min" id="price_min" class="form-control" value="<?php echo $_GET['price_min'] ?? '' ?>" />
+                        </div>
+                        <div class="col-lg-2">
+                            <label class="form-label" for="form2Example1">Prix max</label>
+                            <input type="number" name="price_max" id="price_max" class="form-control" value="<?php echo $_GET['price_max'] ?? '' ?>" />
+                        </div>
+                        <div class="col-lg-2">
+                            <?php $category =  $_GET['category'] ?? null; ?>
+                            <label class="form-label" for="form2Example1">category</label>
+                            <select name="category" class="form-select">
+                                <option value=""> -- </option>
+                                <option value="Vente" <?php echo $category == 'Vente' ? 'selected' : '' ?>>Vente</option>
+                                <option value="Location" <?php echo $category == 'Location' ? 'selected' : '' ?>>Location</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2">
+                            <?php $type = $_GET['type'] ?? null; ?>
+                            <label class="form-label" for="form2Example1">type</label>
+                            <select name="type" class="form-select">
+                                <option value=""> -- </option>
+                                <option value="Appartement" <?php echo $type == 'Appartement' ? 'selected' : '' ?>>Appartement</option>
+                                <option value="Maison" <?php echo $type == 'Maison' ? 'selected' : '' ?>>Maison</option>
+                                <option value="Villa" <?php echo $type == 'Villa' ? 'selected' : '' ?>>Villa</option>
+                                <option value="Bureau" <?php echo $type == 'Bureau' ? 'selected' : '' ?>>Bureau</option>
+                                <option value="Terrain" <?php echo $type == 'Terrain' ? 'selected' : '' ?>>Terrain</option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <?php $trier_par = $_GET['trier_par'] ?? null; ?>
+                            <label class="form-label" for="form2Example1">Trier</label>
+                            <select name="trier_par" class="form-select">
+                                <option value=""> -- </option>
+                                <option value="created_at ASC" <?php echo $trier_par == 'created_at ASC' ? 'selected' : '' ?>>Date croissant</option>
+                                <option value="created_at DESC" <?php echo $trier_par == 'created_at DESC' ? 'selected' : '' ?>>Date décroissant</option>
+                                <option value="price ASC" <?php echo $trier_par == 'price ASC' ? 'selected' : '' ?>>Prix croissant</option>
+                                <option value="price DESC" <?php echo $trier_par == 'price DESC' ? 'selected' : '' ?>>Prix décroissant</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 py-3">
+                            <button type="submit" name="search" class="btn btn-primary">Rechercher</button>
+                            <button type="submit" name="reset" class="btn btn-info">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-3">
         <div class="col-lg-4">
             <h2>Liste des annonces</h2>
         </div>
