@@ -1,5 +1,5 @@
 <?php
-function require_with($pg, $vars)
+function require_with($pg, $vars = [])
 {
 	extract($vars);
 	require $pg;

@@ -8,12 +8,17 @@ if ($_SERVER['REQUEST_METHOD']  == 'POST') {
     $images = [];
     $total_count = count($_FILES['files']['name']);
     for ($i = 0; $i < $total_count; $i++) {
-        $tmpFilePath = $_FILES['files']['tmp_name'][$i];
+        $dir = realpath(__DIR__ . '/../uploads');
+        $tmp_name = $_FILES["files"]["tmp_name"][$i];
         $ext = pathinfo($_FILES['files']['name'][$i], PATHINFO_EXTENSION);
         $newName =  uniqid() . '.' . $ext; // TODO voir
-        $newFilePath = basename("/uploads/" . $newName);
-        if (move_uploaded_file($tmpFilePath, $newFilePath)) {
+        $newNameFileFullPath = $dir . '/' . $newName;
+
+        try {
+            move_uploaded_file($tmp_name, $newNameFileFullPath);
             $images[] = $newName;
+        } catch (Exception $ex) {
+            echo $ex->getMessage();
         }
     }
 

@@ -10,8 +10,9 @@ $uri = trim($_SERVER['REQUEST_URI'], '/');
 if (!$uri) {
   $uri = 'home';
 }
+$explodeUri = explode('/', $uri);
 
-$file =  'pages/' . $uri . '.php';
+$file =  'pages/' . $explodeUri[0] . '.php';
 
 if (file_exists($file)) {
   require $file;
