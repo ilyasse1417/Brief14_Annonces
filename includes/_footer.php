@@ -1,20 +1,24 @@
-<footer class="text-white p-3">
+<footer class="text-white">
     <div class="container">
-        <div class="row">
-            <div class="col-md-4 px-5">
-                <div class="my-2">
-                    <h5 class="d-inline">Email :</h5> <span class="text-red">zinahouse@contact.com</span>
-                </div>
-                <div class="my-2">
-                    <h5 class="d-inline">telephone :</h5> <span class="text-red">0585858585</span>
-                </div>
-            </div>s
-            <div class="col-md-4 px-5 text-center">
-                <img src="dd" alt="logo">
+        <div class="d-lg-flex justify-content-lg-between py-5 text-center text-lg-start">
+            <div class="pb-3">
+                <img src="/images/logo.png" alt="logo" style="height:60px">
             </div>
-            <div class="col-md-4 justify-content-end px-5 ">
-                <div> <i class="fa-brands  font34  mx-2 fa-instagram"></i><span class="text-red">zinahouse0</span> </div>
-                <div> <i class="fa-brands  font34  mx-2 fa-facebook"></i> <span class="text-red">@zinahouse.officiel</span> </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-envelope me-2"></i>
+                    <span class="text-red">contact@zinahouse.com</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-mobile-screen-button  me-2""></i>
+                    <span class=" text-red">+212 585 858 585</span>
+                </div>
+                <div>
+                </div>
+            </div>
+            <div class="pt-3">
+                <a href="#" class="text-white"> <i class="fa-brands fa-2xl m-2 fa-facebook"></i></a>
+                <a href="#" class="text-white"><i class="fa-brands fa-2xl mx-2 fa-instagram"></i></a>
             </div>
         </div>
     </div>

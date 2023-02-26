@@ -5,4 +5,4 @@ $annonce = [
     'title' => 'Mon annonce'
 ];
 
-require_with('templates/rachid.html.php', ['annonce' => $annonce]);
+require_with('templates/test.html.php', ['annonce' => $annonce]);

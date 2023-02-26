@@ -1,4 +1,3 @@
-<!-- <nav class="navbar navbar-expand-lg bg-light" style="background-color: #e3f2fd;"> -->
 <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
   <div class="container">
     <a class="navbar-brand" href="#">
@@ -10,10 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a href="/listing" class="nav-link active" aria-current="page" href="#">Listing</a>
+          <a class="nav-link active" aria-current="page" href="/">Accueil</a>
         </li>
         <?php if ($user = getUser()) : ?>
           <li class="nav-item dropdown">
@@ -21,8 +17,8 @@
               <?php echo $user['email'] ?>
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="profile.php">Mon profil</a></li>
-              <li><a class="dropdown-item" href="profile.php?action=edit">Mes annonces</a></li>
+              <li><a class="dropdown-item" href="/profile">Mon profil</a></li>
+              <li><a class="dropdown-item" href="/my-announcements">Mes annonces</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
