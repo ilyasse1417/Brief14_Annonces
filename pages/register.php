@@ -12,7 +12,9 @@ if ($_SERVER['REQUEST_METHOD']  == 'POST') {
     'phone' => $_POST['phone'],
   ];
 
-
+  if ($_POST['verifypassword'] !=  $_POST['password']) {
+    $errors[] = 'Les deux mot de passe ne matchent pas !';
+  }
   // @TODO check errors like :  $errors = ['firstname' => 'Valeur invalide'];
 
   if ($errors) {
