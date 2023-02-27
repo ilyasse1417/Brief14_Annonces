@@ -32,8 +32,8 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-8 m-auto px-3">
-				<div class="bg-light mt-3 p-4">
+			<div class="col-lg-8 m-auto">
+				<div class="bg-light mt-3 p-4 border mb-3">
 					<h3 class=""><?php echo $announcement['title']  ?></h3>
 					<div class="row">
 						<div class="col-lg-6">
@@ -46,9 +46,9 @@
 						</div>
 						<div class="col-lg-6">
 							<ul>
-								<li>Ville <strong><?php echo $announcement['city']  ?></strong></li>
-								<li>Adresse <strong><?php echo $announcement['address']  ?></strong></li>
-								<li>Code postal <strong><?php echo $announcement['postal_code']  ?></strong></li>
+								<li>Ville : <strong><?php echo $announcement['city']  ?></strong></li>
+								<li>Adresse : <strong><?php echo $announcement['address']  ?></strong></li>
+								<li>Code postal : <strong><?php echo $announcement['postal_code']  ?></strong></li>
 							</ul>
 						</div>
 					</div>
