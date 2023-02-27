@@ -24,7 +24,7 @@
                 </div>
                 <div class=" form-outline mb-2">
                     <label class="form-label" for="form2Example1">Téléphone</label>
-                    <input type="tel" name="phone" id="form2Example1" class="form-control" minlength="10" required value="<?php echo $_POST['phone'] ?? '' ?>""  pattern=" [0-9]" />
+                    <input type="tel" name="phone" id="form2Example1" class="form-control" minlength="10" required value="<?php echo $_POST['phone'] ?? '' ?>""  pattern="[0-9]{10}" />
                     <p class="text-muted">Format autorisé : 0612345678</p>
                 </div>
                 <div class=" form-outline mb-2">
