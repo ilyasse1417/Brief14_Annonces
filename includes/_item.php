@@ -5,13 +5,13 @@
         <div class="card-text">
             <ul>
                 <li> <strong>Catégorie</strong> <?php echo $announcement['category'] ?></li>
-                <li> <strong>type</strong> <?php echo $announcement['type'] ?></li>
-                <li> <strong>Superficie</strong> <?php echo $announcement['superficie'] ?></li>
-                <li> <strong>Prix</strong> <?php echo $announcement['price'] ?></li>
+                <li> <strong>Type</strong> <?php echo $announcement['type'] ?></li>
+                <li> <strong>Superficie</strong> <?php echo $announcement['superficie'] ?> m<sup>2</sup></li>
+                <li> <strong>Prix</strong> <?php echo $announcement['price'] ?> DH</li>
                 <li> <strong>Adresse</strong>
-                    <?php echo $announcement['address'] ?>
-                    <?php echo $announcement['city'] ?>
+                    <?php echo $announcement['address'] ?>,
                     <?php echo $announcement['postal_code'] ?>
+                    <?php echo $announcement['city'] ?>
                 </li>
             </ul>
             <div class="text-center">

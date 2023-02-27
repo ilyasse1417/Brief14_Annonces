@@ -70,9 +70,9 @@
                 </div>
             </div>
             <div class="col-12">
-                <div class="d-flex">
+                <div class="d-flex flex-wrap ">
                     <?php foreach ($images as $k => $image) : ?>
-                        <div class="me-3">
+                        <div class="me-3 mb-3 border p-2">
                             <img class="" src="/uploads/<?php echo $image["file_name"]; ?>" style="height:200px;">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="img_primary" id="<?php echo $image['id'] ?>" value="<?php echo $image['id'] ?>" <?php echo $image['type'] == 'primary' ? 'checked' : '' ?>>
