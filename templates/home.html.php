@@ -69,7 +69,7 @@
     </div>
     <div class="row mt-4">
         <div class="col-lg-4">
-            <h2>Liste des annonces</h2>
+            <h2>Liste d'annonces</h2>
         </div>
     </div>
     <div class="row py-4">
