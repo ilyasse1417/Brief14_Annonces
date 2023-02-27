@@ -16,7 +16,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary w-100 mb-4">Sign in</button>
                 <div class="text-center">
-                    <p>Not a member? <a href="/register">Register</a></p>
+                    <p>Vous n'avez pas encore de compte ? <a href="/register">Inscrivez-vous</a></p>
                 </div>
             </form>
         </div>

@@ -1,23 +1,46 @@
 <form action="/new" method="POST" enctype="multipart/form-data">
-    <div class="container pt-5">
+    <div class="container">
         <div class="row">
-            <div class="col pb-5">
+            <div class="col pb-3">
                 <h2>Ajouter une annonce</h2>
             </div>
         </div>
+    </div>
+    <div class="container mb-4">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-4">
                 <div class="form-outline mb-2">
-                    <label class="form-label" for="form2Example1">title</label>
+                    <label class="form-label" for="form2Example1">Titre</label>
                     <input type="text" name="title" id="form2Example1" class="form-control" required />
                 </div>
                 <div class="form-outline mb-2">
-                    <label class="form-label" for="form2Example1">price</label>
+                    <label class="form-label" for="form2Example1">Prix</label>
                     <input type="number" name="price" id="form2Example1" class="form-control" required />
                     <div class="text-danger"><?php echo isset($errors['price']) ? $errors['price'] : "" ?></div>
                 </div>
                 <div class="form-outline mb-2">
-                    <label class="form-label" for="form2Example1">category</label>
+                    <label class="form-label" for="form2Example2">Superficie (m<sup>2</sup>)</label>
+                    <input type="number" name="superficie" id="form2Example2" class="form-control" required />
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-outline mb-2">
+                    <label class="form-label" for="form2Example1">Ville</label>
+                    <input type="text" name="city" id="form2Example1" class="form-control" required />
+                    <div class="text-danger"><?php echo isset($errors['city']) ? $errors['city'] : "" ?></div>
+                </div>
+                <div class="form-outline mb-2">
+                    <label class="form-label" for="form2Example1">Adresse</label>
+                    <input type="text" name="address" id="form2Example1" class="form-control" required />
+                </div>
+                <div class="form-outline mb-2">
+                    <label class="form-label" for="form2Example2">Code postal</label>
+                    <input type="text" name="postal_code" id="form2Example2" class="form-control" required />
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-outline mb-2">
+                    <label class="form-label" for="form2Example1">Catégorie</label>
                     <select name="category" class="form-select" required>
                         <option selected>--</option>
                         <option value="Vente">Vente</option>
@@ -26,7 +49,7 @@
                     <div class="text-danger"><?php echo isset($errors['category']) ? $errors['category'] : "" ?></div>
                 </div>
                 <div class="form-outline mb-2">
-                    <label class="form-label" for="form2Example1">type</label>
+                    <label class="form-label" for="form2Example1">Type</label>
                     <select name="type" class="form-select" required>
                         <option selected>--</option>
                         <option value="Appartement">Appartement</option>
@@ -37,35 +60,17 @@
                     </select>
                     <div class="text-danger"><?php echo isset($errors['type']) ? $errors['type'] : "" ?></div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="form-outline mb-2">
-                    <label class="form-label" for="form2Example1">city</label>
-                    <input type="text" name="city" id="form2Example1" class="form-control" required />
-                    <div class="text-danger"><?php echo isset($errors['city']) ? $errors['city'] : "" ?></div>
-                </div>
-                <div class="form-outline mb-2">
-                    <label class="form-label" for="form2Example1">address</label>
-                    <input type="text" name="address" id="form2Example1" class="form-control" required />
-                    <div class="text-danger"><?php echo isset($errors['address']) ? $errors['address'] : "" ?></div>
-                </div>
-                <div class="form-outline mb-2">
-                    <label class="form-label" for="form2Example2">postal_code</label>
-                    <input type="text" name="postal_code" id="form2Example2" class="form-control" required />
-                </div>
-                <div class="form-outline mb-2">
-                    <label class="form-label" for="form2Example2">superficie</label>
-                    <input type="number" name="superficie" id="form2Example2" class="form-control" required />
-                </div>
-                <div class="form-outline mb-2">
-                    <label for="file">Choose files to upload</label>
+                <div class="form-outline mt-4">
+                    <label class="form-label" for="file">Photos</label>
                     <input type="file" id="file" name="files[]" multiple />
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3">
-                    <button type="submit" class="btn btn-primary w-100 my-4">Enregistrer</button>
-                </div>
+        </div>
+        <!-- <hr class="mt-3"> -->
+        <div class="row mt-5">
+            <div class="col text-end mb-3">
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
+                <a href="/home" class="btn btn-outline-dark">Annuler</a>
             </div>
         </div>
     </div>

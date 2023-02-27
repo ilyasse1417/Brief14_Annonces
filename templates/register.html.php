@@ -24,8 +24,13 @@
                 </div>
                 <div class=" form-outline mb-2">
                     <label class="form-label" for="form2Example1">Téléphone</label>
+<<<<<<< HEAD
                     <input type="tel" name="phone" id="form2Example1" class="form-control" value="<?php echo $_POST['phone'] ?? '' ?>" />
                     <!-- <p class="text-muted">Format autorisé : 0612345678</p> -->
+=======
+                    <input type="tel" name="phone" id="form2Example1" class="form-control" minlength="10" required value="<?php echo $_POST['phone'] ?? '' ?>""  pattern="[0-9]{10}" />
+                    <p class="text-muted">Format autorisé : 0612345678</p>
+>>>>>>> 6f030f642b26537e6679ce5c6ed2914a594c8ec8
                 </div>
                 <div class=" form-outline mb-2">
                     <label class="form-label" for="form2Example2">Mot de passe</label>
@@ -37,7 +42,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary w-100 my-4">Sign in</button>
                 <div class="text-center">
-                    <p>Déjà inscrit? <a href="/login">Connexion</a></p>
+                    <p>Déjà inscrit ? <a href="/login"> Connectez-vous</a></p>
                 </div>
             </form>
         </div>

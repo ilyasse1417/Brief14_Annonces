@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: #e3f2fd;">
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/home">
       <img src="/images/logo.png" alt="logo" style="height: 49px;">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="/logout">logout</a></li>
+              <li><a class="dropdown-item" href="/logout">Déconnexion</a></li>
             </ul>
           </li>
         <?php else : ?>
@@ -34,3 +34,4 @@
     </div>
   </div>
 </nav>
+<div style="margin-top: 100px;"></div>

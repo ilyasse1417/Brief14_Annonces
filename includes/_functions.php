@@ -57,53 +57,6 @@ function dump($var)
 	echo '</pre>';
 }
 
-function renderView_depricated($templateName, $data = [])
-{
-	$template = 'templates/' . $templateName;
-	if (!is_file($template)) {
-		throw new \RuntimeException('Template not found: ' . $template);
-	}
-
-	// define a closure with a scope for the variable extraction
-	$result = function ($file, array $data = array()) {
-		ob_start();
-		extract($data, EXTR_SKIP);
-		try {
-			include $file;
-		} catch (\Exception $e) {
-			ob_end_clean();
-			throw $e;
-		}
-		return ob_get_clean();
-	};
-
-	// call the closure
-	echo $result($template, $data);
-}
-
-
-
-function runApp()
-{
-	$uri = trim($_SERVER['REQUEST_URI'], '/');
-	if (!$uri) {
-		$uri = 'page/home';
-	}
-	$explode = explode('/', $uri);
-	if (count($explode) < 2) {
-		$explode = ['page', '404'];
-	}
-	$pageName = $explode[1];
-	$file = realpath(__DIR__ . '/../pages/' . $pageName . '.php');
-
-	if (file_exists($file)) {
-		dump($file);
-		require_once $file;
-	} else {
-		require_once realpath(__DIR__ . '/../pages/404.php');
-	}
-}
-
 function instert_client($pdo, $data)
 {
 	$inst = $pdo->prepare(
@@ -126,16 +79,12 @@ function instert_client($pdo, $data)
 	return $id;
 }
 
-
-function findClient()
+function flash_message($type, $message)
 {
-	$inst = $this->db->prepare("SELECT * FROM announcement ORDER BY created_at DESC");
-	$inst->execute();
-	$annonces = $inst->fetchall(\PDO::FETCH_OBJ);
-	$listannonces = array();
-	foreach ($annonces as $annonce) {
-		$annonce = $this->_sdtClassToAnnonceObject($annonce);
-		array_push($listannonces, $annonce);
+	if (isset($_SESSION['flash_message'])) {
+		$message = $_SESSION['flash_message'];
+		unset($_SESSION['flash_message']);
+		return $message;
 	}
-	return $listannonces;
+	return null;
 }
