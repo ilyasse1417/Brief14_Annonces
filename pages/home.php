@@ -37,7 +37,7 @@ if (isset($_GET['reset'])) {
 
 $sql = "SELECT `announcement`.*, `image`.file_name FROM `announcement` LEFT JOIN `image` ON announcement.`id` = image.announcement_id  AND  image.type = 'primary' ";
 if ($where) {
-    $sql .= $where;
+    $sql .= 'WHERE 1 ' . $where;
 }
 
 $inst = $pdo->prepare($sql);
