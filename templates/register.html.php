@@ -16,16 +16,16 @@
                 </div>
                 <div class=" form-outline mb-2">
                     <label class="form-label" for="form2Example1">Prénom</label>
-                    <input type="text" name="firstname" id="form2Example1" class="form-control" maxlength="100" required value="<?php echo $_POST['firstname'] ?? '' ?>"" />
+                    <input type="text" name="firstname" id="form2Example1" class="form-control" maxlength="100" required value="<?php echo $_POST['firstname'] ?? '' ?>" />
                 </div>
                 <div class=" form-outline mb-2">
                     <label class="form-label" for="form2Example1">Email</label>
-                    <input type="email" name="email" id="form2Example1" class="form-control" maxlength="200" required value="<?php echo $_POST['email'] ?? '' ?>"" />
+                    <input type="email" name="email" id="form2Example1" class="form-control" maxlength="200" required value="<?php echo $_POST['email'] ?? '' ?>" />
                 </div>
                 <div class=" form-outline mb-2">
                     <label class="form-label" for="form2Example1">Téléphone</label>
-                    <input type="tel" name="phone" id="form2Example1" class="form-control" minlength="10" required value="<?php echo $_POST['phone'] ?? '' ?>""  pattern=" [0-9]" />
-                    <p class="text-muted">Format autorisé : 0612345678</p>
+                    <input type="tel" name="phone" id="form2Example1" class="form-control" value="<?php echo $_POST['phone'] ?? '' ?>" />
+                    <!-- <p class="text-muted">Format autorisé : 0612345678</p> -->
                 </div>
                 <div class=" form-outline mb-2">
                     <label class="form-label" for="form2Example2">Mot de passe</label>

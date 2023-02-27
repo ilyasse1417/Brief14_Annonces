@@ -13,9 +13,12 @@ if ($_SERVER['REQUEST_METHOD']  == 'POST') {
         $ext = pathinfo($_FILES['files']['name'][$i], PATHINFO_EXTENSION);
         $newName =  uniqid() . '.' . $ext; // TODO voir
         $newNameFileFullPath = $dir . '/' . $newName;
+        // dd($newNameFileFullPath);
 
         try {
-            move_uploaded_file($tmp_name, $newNameFileFullPath);
+            $move = move_uploaded_file($tmp_name, $newNameFileFullPath);
+            var_dump($move);
+            echo $_FILES["files"]["error"][$i];
             $images[] = $newName;
         } catch (Exception $ex) {
             echo $ex->getMessage();
