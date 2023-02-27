@@ -4,7 +4,10 @@ body {
     padding: 0;
 }
 
+main {
+    min-height: calc(100vh - 240px);
+}
+
 footer {
     background: #24292f;
-    margin-top: calc(60vh - 240px);
 }
