@@ -35,7 +35,7 @@ if (isset($_GET['reset'])) {
     $where = '';
 }
 
-$sql = "SELECT `announcement`.*, `image`.file_name FROM `announcement` LEFT JOIN `image` ON announcement.`id` = image.announcement_id  WHERE  image.type = 'primary' ";
+$sql = "SELECT `announcement`.*, `image`.file_name FROM `announcement` LEFT JOIN `image` ON announcement.`id` = image.announcement_id  AND  image.type = 'primary' ";
 if ($where) {
     $sql .= $where;
 }

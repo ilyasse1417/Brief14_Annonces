@@ -8,7 +8,7 @@ if (!$client) {
 }
 
 $where = " AND client_id = " . $client['id'];
-$sql = "SELECT `announcement`.*, `image`.file_name FROM `announcement` LEFT JOIN `image` ON announcement.`id` = image.announcement_id  WHERE  image.type = 'primary' ";
+$sql = "SELECT `announcement`.*, `image`.file_name FROM `announcement` LEFT JOIN `image` ON announcement.`id` = image.announcement_id  AND  image.type = 'primary' ";
 $sql .= $where;
 
 $inst = $pdo->prepare($sql);

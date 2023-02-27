@@ -23,7 +23,6 @@ if (isset($_GET["id"])) {
 }
 
 if ($_SERVER['REQUEST_METHOD']  == 'POST') {
-
     $images = [];
     $total_count = count($_FILES['files']['name']);
     for ($i = 0; $i < $total_count; $i++) {
@@ -63,20 +62,25 @@ if ($_SERVER['REQUEST_METHOD']  == 'POST') {
 
     // insert les images
     foreach ($images as $k => $imageName) {
-
         $inst = $pdo->prepare(
             "INSERT INTO image (`file_name`, `type`, `announcement_id`, `created_at`, `updated_at`) 
     	    VALUES(:file_name, :type, :announcement_id,:created_at, :updated_at)"
         );
         $type = null;
-        if ($k == 0) {
-            // $type = 'primary';
-        }
         $inst->bindParam(':file_name', $imageName);
         $inst->bindParam(':type', $type);
         $inst->bindParam(':announcement_id', $announcement_id);
         $inst->bindParam(':created_at', $now);
         $inst->bindParam(':updated_at', $now);
+        $inst->execute();
+    }
+
+    // check primary
+    $img_primary = $_POST["img_primary"];
+    if ($img_primary) {
+        $inst = $pdo->prepare("UPDATE image SET type= 'primary' = null WHERE announcement_id=" . $announcement_id);
+        $inst->execute();
+        $inst = $pdo->prepare("UPDATE image SET type= 'primary' WHERE  id = $img_primary ");
         $inst->execute();
     }
 
