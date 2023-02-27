@@ -21,21 +21,8 @@
     </div>
     <?php if (isset($ud)) : ?>
         <div class="card-footer d-flex justify-content-between">
-            <a href="edit/?id=<?php echo $announcement['id'] ?>">Modifier</a>
-            <a href="delete/?id=<?php echo $announcement['id'] ?>" class="js-link-confirm">Supprimer</a>
+            <a href="/edit/?id=<?php echo $announcement['id'] ?>">Modifier</a>
+            <a href="/delete/?id=<?php echo $announcement['id'] ?>" class="js-link-confirm">Supprimer</a>
         </div>
     <?php endif; ?>
 </div>
-
-<script>
-    var deleteLinks = document.querySelectorAll(".js-link-confirm");
-    for (var i = 0; i < deleteLinks.length; i++) {
-        deleteLinks[i].addEventListener("click", function(event) {
-            event.preventDefault();
-            var choice = confirm("Êtes-vous sur de vouloir supprimer cet élément ?");
-            if (choice) {
-                window.location.href = this.getAttribute("href");
-            }
-        });
-    }
-</script>

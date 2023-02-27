@@ -74,7 +74,7 @@
                     <?php foreach ($images as $k => $image) : ?>
                         <div class="me-3">
                             <img class="" src="/uploads/<?php echo $image["file_name"]; ?>" style="height:200px;">
-                            <span class="d-block"> <a href="/delete-image/?id=<?php echo $image['id']; ?>"> Supprimer</a></span>
+                            <span class="d-block"> <a href="/delete-image/?id=<?php echo $image['id'] . '&announcement_id=' . $announcement['id']; ?>" class="js-link-confirm"> Supprimer</a></span>
                         </div>
                     <?php endforeach ?>
                 </div>
