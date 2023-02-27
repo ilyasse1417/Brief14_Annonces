@@ -32,7 +32,6 @@
                 <div class="form-outline mb-2">
                     <label class="form-label" for="form2Example1">Adresse</label>
                     <input type="text" name="address" id="form2Example1" class="form-control" required />
-                    <div class="text-danger"><?php echo isset($errors['address']) ? $errors['address'] : "" ?></div>
                 </div>
                 <div class="form-outline mb-2">
                     <label class="form-label" for="form2Example2">Code postal</label>
