@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: #e3f2fd;">
   <div class="container">
     <a class="navbar-brand" href="#">
       <img src="/images/logo.png" alt="logo" style="height: 49px;">
@@ -34,3 +34,4 @@
     </div>
   </div>
 </nav>
+<div style="margin-top: 100px;"></div>

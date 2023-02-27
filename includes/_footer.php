@@ -2,7 +2,7 @@
     <div class="container">
         <div class="d-lg-flex justify-content-lg-between py-5 text-center text-lg-start">
             <div class="pb-3">
-                <img src="/images/logo.png" alt="logo" style="height:60px">
+                <img src="/images/logo-dark.png" alt="logo" style="height:60px">
             </div>
             <div>
                 <div>

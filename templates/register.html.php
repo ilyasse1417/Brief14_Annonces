@@ -37,7 +37,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary w-100 my-4">Sign in</button>
                 <div class="text-center">
-                    <p>Déjà inscrit? <a href="/login">Connexion</a></p>
+                    <p>Déjà inscrit ? <a href="/login"> Connectez-vous</a></p>
                 </div>
             </form>
         </div>

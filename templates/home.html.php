@@ -1,8 +1,8 @@
 <div class="container mt-5">
-    <div class="row bg-light p-2">
-        <div class="col">
-            <form action="/home/" method="GET">
-                <div class="container py-2">
+    <div class="row">
+        <div class="col-12">
+            <div class="bg-light  p-3 border">
+                <form action="/home/" method="GET">
                     <div class="row">
                         <div class="col-lg-2">
                             <label class="form-label" for="form2Example1">Ville</label>
@@ -18,7 +18,7 @@
                         </div>
                         <div class="col-lg-2">
                             <?php $category =  $_GET['category'] ?? null; ?>
-                            <label class="form-label" for="form2Example1">category</label>
+                            <label class="form-label" for="form2Example1">Catégorie</label>
                             <select name="category" class="form-select">
                                 <option value=""> -- </option>
                                 <option value="Vente" <?php echo $category == 'Vente' ? 'selected' : '' ?>>Vente</option>
@@ -27,7 +27,7 @@
                         </div>
                         <div class="col-lg-2">
                             <?php $type = $_GET['type'] ?? null; ?>
-                            <label class="form-label" for="form2Example1">type</label>
+                            <label class="form-label" for="form2Example1">Type</label>
                             <select name="type" class="form-select">
                                 <option value=""> -- </option>
                                 <option value="Appartement" <?php echo $type == 'Appartement' ? 'selected' : '' ?>>Appartement</option>
@@ -37,7 +37,6 @@
                                 <option value="Terrain" <?php echo $type == 'Terrain' ? 'selected' : '' ?>>Terrain</option>
                             </select>
                         </div>
-
                         <div class="col-lg-2">
                             <?php $trier_par = $_GET['trier_par'] ?? null; ?>
                             <label class="form-label" for="form2Example1">Trier</label>
@@ -49,13 +48,23 @@
                                 <option value="price DESC" <?php echo $trier_par == 'price DESC' ? 'selected' : '' ?>>Prix décroissant</option>
                             </select>
                         </div>
-                        <div class="col-lg-2 py-3">
-                            <button type="submit" name="search" class="btn btn-primary">Rechercher</button>
-                            <button type="submit" name="reset" class="btn btn-info">Reset</button>
+                    </div>
+                    <div class="row">
+                        <div class="col text-end">
+                            <div class="py-3">
+                                <button type="submit" name="search" class="btn btn-primary me-2">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    Rechercher
+                                </button>
+                                <button type="submit" name="reset" class="btn btn-info">
+                                    <i class="fa-solid fa-rotate-right"></i>
+                                    Réinitialiser
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
     <div class="row mt-3">
@@ -65,8 +74,8 @@
     </div>
     <div class="row py-4">
         <?php foreach ($announcements as $announcement) : ?>
-            <div class="col-lg-3">
-                <div class="card" style="width: 18rem;">
+            <div class="col-lg-3 mb-5">
+                <div class="card">
                     <img src="/uploads/<?php echo $announcement['file_name'] ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $announcement['title'] ?></h5>
