@@ -1,3 +1,4 @@
+</main>
 <footer class="text-white">
     <div class="container">
         <div class="d-lg-flex justify-content-lg-between py-5 text-center text-lg-start">
