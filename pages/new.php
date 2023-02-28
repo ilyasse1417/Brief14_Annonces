@@ -17,8 +17,6 @@ if ($_SERVER['REQUEST_METHOD']  == 'POST') {
 
         try {
             $move = move_uploaded_file($tmp_name, $newNameFileFullPath);
-            var_dump($move);
-            echo $_FILES["files"]["error"][$i];
             $images[] = $newName;
         } catch (Exception $ex) {
             echo $ex->getMessage();

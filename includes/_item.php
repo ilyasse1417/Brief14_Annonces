@@ -19,7 +19,8 @@
             </div>
         </div>
     </div>
-    <?php if (isset($ud)) : ?>
+    <?php if (isset($ud)) :
+        echo $ud; ?>
         <div class="card-footer d-flex justify-content-between">
             <a href="/edit/?id=<?php echo $announcement['id'] ?>">Modifier</a>
             <a href="/delete/?id=<?php echo $announcement['id'] ?>" class="js-link-confirm">Supprimer</a>

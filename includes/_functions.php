@@ -18,7 +18,6 @@ function getUser()
 	if (isset($_SESSION['client'])) {
 		return $_SESSION['client'];
 	}
-
 	return false;
 }
 
